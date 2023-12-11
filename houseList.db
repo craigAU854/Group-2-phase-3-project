@@ -1,3 +1,12 @@
-royal,langata,7,6000,mansion
-guyesa,south c,4,50000,mansion
-curve,mombasa,2,apartment,2000
+Name of house: amana
+Location: langata
+Number of rooms: 4
+Size in square feet: 5000
+Type of house: mansion
+
+Name of house: curve
+Location: mombasa road
+Number of rooms: 2
+Size in square feet: 2000
+Type of house: apartment
+
