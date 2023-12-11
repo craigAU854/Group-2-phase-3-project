@@ -1,3 +1,4 @@
+# main.py
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
@@ -54,6 +55,13 @@ def delete_house(session):
     else:
         print("House not found.")
 
+def sort_houses(session):
+    print("Sorting houses by size...")
+    houses = session.query(House).order_by(House.size).all()
+    for house in houses:
+        print("\n".join(f"{key}: {getattr(house, key)}" for key in House.__table__.columns.keys()))
+        print()
+
 def main():
     engine = create_engine('sqlite:///houseList.db', echo=True)
     create_tables(engine)
@@ -61,13 +69,14 @@ def main():
     session = Session()
 
     choice = 0
-    while choice != 5:
+    while choice != 6:
         print("***Welcome to Amana Realty***")
         print("1) Add a house")
         print("2) Find a house")
         print("3) Show houses")
         print("4) Delete a house")
-        print("5) Quit")
+        print("5) Sort houses by size")
+        print("6) Quit")
 
         try:
             choice = int(input())
@@ -88,6 +97,9 @@ def main():
             delete_house(session)
 
         elif choice == 5:
+            sort_houses(session)
+
+        elif choice == 6:
             print("Quitting Program...")
 
     print('Program Terminated')
