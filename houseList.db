@@ -1,12 +1,24 @@
 Name of house: amana
-Location: langata
+Location: south c
 Number of rooms: 4
 Size in square feet: 5000
+Type of house: mansion
+
+Name of house: royal
+Location: langata
+Number of rooms: 7
+Size in square feet: 20000
 Type of house: mansion
 
 Name of house: curve
 Location: mombasa road
 Number of rooms: 2
-Size in square feet: 2000
-Type of house: apartment
+Size in square feet: apartment
+Type of house: 3000
+
+Name of house: tsavo
+Location: ngong road
+Number of rooms: 1
+Size in square feet: 500
+Type of house: bedsitter
 
