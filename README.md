@@ -1,15 +1,17 @@
-# Group-2-phase-3-project
+## GROUP 2 PROJECT ##
+
 ## Real Estate CLI ##
 Welcome to the Real Estate CLI project! This command-line interface (CLI) is designed to connect clients to real estate websites directly, providing a seamless and efficient way to access real estate information. This README will guide you through the setup, features, and best practices employed in this project.
 
 ## Table of Contents ##
-**Getting Started**
-Configuration and Dependencies
-SQLAlchemy Schema Design
-CLI Best Practices
-DSA Execution
-Contributing
-License
+*Getting Started
+*Configuration and Dependencies
+*SQLAlchemy Schema Design
+*CLI Best Practices
+*DSA Execution
+*Contributing
+*License
+
 ## Getting Started ##
 To get started with the Real Estate CLI, follow these steps:
 
@@ -32,7 +34,7 @@ bash
 Copy code
 pipenv shell
 
-**3.Run the CLI script.**
+**4.Run the CLI script.**
 
 bash
 Copy code
@@ -42,12 +44,12 @@ Now you're ready to explore and utilize the Real Estate CLI!
 
 ## Configuration and Dependencies ##
 **Pipenv Environment**
-
 The project uses Pipenv to manage dependencies. The Pipfile includes all necessary dependencies, and you can install them with the following command:
 
 bash
 Copy code
 pipenv install
+
 Make sure to activate the virtual environment before running the CLI:
 
 bash
@@ -71,9 +73,6 @@ Utilization of external libraries (e.g., Click) to minimize project-specific cod
 ## DSA Execution ##
 The Real Estate CLI incorporates data structures such as lists, tuples, and dictionaries. Additionally, an algorithm from the Data Structures and Algorithms module is applied in an appropriate context within the CLI.
 
-## Contributing ##
-If you would like to contribute to the Real Estate CLI project, please follow the guidelines in CONTRIBUTING.md. We welcome your input and ideas!
-
 ## Owners ##
 ~ Guyo Halake
 ~ Craig Otieno
@@ -81,7 +80,15 @@ If you would like to contribute to the Real Estate CLI project, please follow th
 ~ Dennis Kimani
 ~ Claire Muiru
 
+
+## Contributing ##
+If you would like to contribute to the Real Estate CLI project, please follow the guidelines in CONTRIBUTING.md. We welcome your input and ideas!
+
 ## License ##
 This project is licensed under the MIT License - see the LICENSE file for details. Feel free to use, modify, and distribute the code according to the terms of the license.
 
 Thank you for choosing the Real Estate CLI. Happy exploring!
+
+
+
+
