@@ -2,6 +2,8 @@
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
+engine = create_engine('sqlite:///houseList.db')
+
 Base = declarative_base()
 
 class House(Base):
