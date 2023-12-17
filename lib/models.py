@@ -1,7 +1,8 @@
 # models.py
-from sqlalchemy import Column, Integer, String, UniqueConstraint , Float, desc , relationship
+from sqlalchemy import Column, Integer, String, UniqueConstraint , Float, desc 
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker,relationship
 
 engine = create_engine('sqlite:///houseList.db')
 Session = sessionmaker(bind=engine)
@@ -27,6 +28,18 @@ class House(Base):
     
     def cheap_house(cls):
         return session.query(cls).order_by((cls.price)).first()
+    
+    def most_area_sqft(cls):
+        return session.query(cls).order_by(desc(cls.area_sqft)).first()
+    
+    def least_area_sqft(cls):
+        return session.query(cls).order_by((cls.area_sqft)).first()
+    
+    def most_rooms(cls):
+        return session.query(cls).order_by(desc(cls.rooms)).first()
+    
+    def get_rooms(cls):
+        return session.query(cls)
 
 
 class User(Base):
