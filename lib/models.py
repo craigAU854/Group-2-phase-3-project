@@ -57,6 +57,16 @@ class User(Base):
     house = relationship('house', back_populates='users')
     agent = relationship('agent', back_populates='users')
 
+    def most_houses(cls):
+        return session.query(cls).order_by(desc(cls.no_of_houses)).first()
+
+    def most_expensive_house(cls):
+        return session.query(cls.house).order_by(desc(cls.house.price)).first()
+
+    def least_expensive_house(cls):
+        return session.query(cls.house).order_by(cls.house.price).first()
+    
+
 class Agent(Base):
     __tablename__ = 'agents'
     id = Column(Integer, primary_key=True)
@@ -65,9 +75,15 @@ class Agent(Base):
     name = Column(String)
     email = Column(String(55))
     phone_number = Column(String)
+    no_of_sold_houses = Column(Integer)
 
     user = relationship('user', back_populates='agents')
     house = relationship('house', back_populates='agents')
+ 
+    def most_sold_houses(cls):
+        return session.query(cls).order_by(desc(cls.no_of_sold_houses)).first()
 
+    def least_sold_houses(cls):
+        return session.query(cls).order_by(cls.no_of_sold_houses).first()
 # Create tables
 Base.metadata.create_all(bind=engine)
