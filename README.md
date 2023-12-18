@@ -32,26 +32,24 @@ To get started with the Real Estate CLI, follow these steps:
 
 2. *Install dependencies using Pipenv:*
 
-    bash
+    ~~~bash~~~
     pipenv install
     
 
 3. *Activate the virtual environment:*
 
-    bash
+    ~~~bash~~~
     pipenv shell
     
 
 4. *Run the CLI script:*
 
-   ~~~ bash~~~
+    ~~~ bash~~~
     python cli.py 
     
 ## External Libraries ##
 The project makes use of external libraries, such as SQLAlchemy for database management and Click for CLI-related tasks. These libraries enhance the functionality and maintainability of the code.
 
-## SQLAlchemy Schema Design ##
-The Real Estate CLI utilizes SQLAlchemy ORM to create and manage a database schema with three or more related tables. Alembic is employed to handle database migrations, ensuring proper organization and version control.
 
 ## CLI Best Practices ##
 **The CLI follows best practices to enhance user experience**
