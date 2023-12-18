@@ -4,10 +4,11 @@
 Welcome to the Real Estate CLI project! This command-line interface (CLI) is designed to help a user to search for any listed property,see available listings all from the cli , providing a seamless and efficient way to access real estate information. This README will guide you through the setup, features, and best practices employed in this project.
 
 ## Features
--A user is able to list property
--A user is able to add a house
--A user can get the details for a specific property
--A user is able to delete a house 
+1. A user is able to list a property.
+2. A user is able to add a house.
+3. A user can get the details for a specific property.
+4. A user is able to delete a house.
+
 
 ## Table of Contents ##
 1. Introduction
