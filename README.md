@@ -10,15 +10,15 @@ A user can get the details for a specific property
 A user is able to delete a house 
 
 ## Table of Contents ##
-**1.Introduction**
-**2.Installation**
-**3.Getting Started**
-**4.Configuration and Dependencies**
-**5.Search Criteria**
-**6.Example Usage**
-**7.Contributing**
-**8.Owners**
-**9.License**
+1. Introduction
+2. Installation
+3. Getting Started
+4. Configuration and Dependencies
+5. Search Criteria
+6. Example Usage
+7. Contributing
+8. Owners
+9. License
 
 ## Getting Started ##
 To get started with the Real Estate CLI, follow these steps:
