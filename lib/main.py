@@ -11,10 +11,11 @@ def add_house(session):
     nHouse = get_str_input("Enter name of the house: ")
     nLocation = get_str_input("Enter location of the house: ")
     nRooms = get_int_input("Enter number of rooms: ")
+    nPrice = get_int_input("Enter price of the house: ")
     nSize = get_int_input("Enter size of the house: ")
     nType = get_str_input("Enter the type of the house: ")
 
-    new_house = House(name=nHouse, location=nLocation, rooms=nRooms, size=nSize, house_type=nType)
+    new_house = House(name=nHouse, location=nLocation, rooms=nRooms, price=nPrice, size=nSize, house_type=nType)
     session.add(new_house)
     session.commit()
 

@@ -1,8 +1,7 @@
-# models.py
-from sqlalchemy import Column, Integer, String, UniqueConstraint , Float, desc 
+from sqlalchemy import Column, Integer, String, UniqueConstraint, Float, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker,relationship
+from sqlalchemy.orm import sessionmaker, relationship
 
 engine = create_engine('sqlite:///houseList.db')
 Session = sessionmaker(bind=engine)
@@ -23,25 +22,6 @@ class House(Base):
     users = relationship('User', back_populates='house')
     agents = relationship('Agent', back_populates='house')
 
-    def expensive_house(cls):
-        return session.query(cls).order_by(desc(cls.price)).first()
-    
-    def cheap_house(cls):
-        return session.query(cls).order_by((cls.price)).first()
-    
-    def most_area_sqft(cls):
-        return session.query(cls).order_by(desc(cls.area_sqft)).first()
-    
-    def least_area_sqft(cls):
-        return session.query(cls).order_by((cls.area_sqft)).first()
-    
-    def most_rooms(cls):
-        return session.query(cls).order_by(desc(cls.rooms)).first()
-    
-    def get_rooms(cls):
-        return session.query(cls)
-
-
 class User(Base):
     __tablename__ = 'users'
 
@@ -49,41 +29,34 @@ class User(Base):
         UniqueConstraint('email', name='user_email'),
     )
     id = Column(Integer, primary_key=True)
-    house_id = Column(Integer, ForeignKey=('house.id'))
+    house_id = Column(Integer, ForeignKey('houses.id'))
     name = Column(String, index=True)
-    email = Column(String(55))
+    email = Column(String(55), index=True, unique=True)
     no_of_houses = Column(Integer)
 
-    house = relationship('house', back_populates='users')
-    agent = relationship('agent', back_populates='users')
-
-    def most_houses(cls):
-        return session.query(cls).order_by(desc(cls.no_of_houses)).first()
-
-    def most_expensive_house(cls):
-        return session.query(cls.house).order_by(desc(cls.house.price)).first()
-
-    def least_expensive_house(cls):
-        return session.query(cls.house).order_by(cls.house.price).first()
-    
+    house = relationship('House', back_populates='users')
+    agent = relationship('Agent', back_populates='user')
 
 class Agent(Base):
     __tablename__ = 'agents'
     id = Column(Integer, primary_key=True)
-    user_id = Column(Integer, ForeignKey=('user.id'))
-    house_id = Column(Integer, ForeignKey=('house.id'))
+    user_id = Column(Integer, ForeignKey('users.id'))
+    house_id = Column(Integer, ForeignKey('houses.id'))
     name = Column(String)
     email = Column(String(55))
     phone_number = Column(String)
     no_of_sold_houses = Column(Integer)
 
-    user = relationship('user', back_populates='agents')
-    house = relationship('house', back_populates='agents')
- 
-    def most_sold_houses(cls):
-        return session.query(cls).order_by(desc(cls.no_of_sold_houses)).first()
+    user = relationship('User', back_populates='agent')
+    house = relationship('House', back_populates='agents')
 
-    def least_sold_houses(cls):
-        return session.query(cls).order_by(cls.no_of_sold_houses).first()
+    @classmethod
+    def get_sold_houses_count(cls, session, agent_id):
+        agent = session.query(cls).filter_by(id=agent_id).first()
+        if agent:
+            return agent.no_of_sold_houses
+        else:
+            return 0
+
 # Create tables
 Base.metadata.create_all(bind=engine)
