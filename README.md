@@ -23,47 +23,30 @@ A user is able to delete a house
 ## Getting Started ##
 To get started with the Real Estate CLI, follow these steps:
 
-**1.Clone the repository to your local machine.**
+1. *Clone the repository:*
 
-~bash~
-Copy code
-git clone https://github.com/your-username/real-estate-cli.git
-cd real-estate-cli
+    bash
+    git clone https://github.com/your-username/real-estate-cli.git
+    cd real-estate-cli
+    
 
-**2.Install dependencies using Pipenv.**
+2. *Install dependencies using Pipenv:*
 
-bash
-Copy code
-pipenv install
+    bash
+    pipenv install
+    
 
-**3.Activate the virtual environment.**
+3. *Activate the virtual environment:*
 
-bash
-Copy code
-pipenv shell
+    bash
+    pipenv shell
+    
 
-**4.Run the CLI script.**
+4. *Run the CLI script:*
 
-bash
-Copy code
-python cli.py
-
-Now you're ready to explore and utilize the Real Estate CLI!
-
-## Configuration and Dependencies ##
-**Pipenv Environment**
-The project uses Pipenv to manage dependencies. The Pipfile includes all necessary dependencies, and you can install them with the following command:
-
-bash
-Copy code
-pipenv install
-
-Make sure to activate the virtual environment before running the CLI:
-
-bash
-Copy code
-pipenv shell
-
+    bash
+    python cli.py
+    
 ## External Libraries ##
 The project makes use of external libraries, such as SQLAlchemy for database management and Click for CLI-related tasks. These libraries enhance the functionality and maintainability of the code.
 
