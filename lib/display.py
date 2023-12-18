@@ -1,4 +1,3 @@
-# display.py
 from models import House
 
 def display_house_info(house):

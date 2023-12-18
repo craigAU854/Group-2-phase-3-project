@@ -1,4 +1,3 @@
-# seed.py
 from models import House, User, Agent, Base, engine, Session  # Import Session instead of session
 
 # Create tables
