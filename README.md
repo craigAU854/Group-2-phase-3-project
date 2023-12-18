@@ -8,21 +8,24 @@ A user is able to list property
 A user is able to add a house
 A user can get the details for a specific property
 A user is able to delete a house 
+
 ## Table of Contents ##
-*Getting Started
-*Configuration and Dependencies
-*SQLAlchemy Schema Design
-*CLI Best Practices
-*DSA Execution
-*Contributing
-*License
+**1.Introduction**
+**2.Installation**
+**3.Getting Started**
+**4.Configuration and Dependencies**
+**5.Search Criteria**
+**6.Example Usage**
+**7.Contributing**
+**8.Owners**
+**9.License**
 
 ## Getting Started ##
 To get started with the Real Estate CLI, follow these steps:
 
 **1.Clone the repository to your local machine.**
 
-bash
+~bash~
 Copy code
 git clone https://github.com/your-username/real-estate-cli.git
 cd real-estate-cli
@@ -68,7 +71,7 @@ The project makes use of external libraries, such as SQLAlchemy for database man
 The Real Estate CLI utilizes SQLAlchemy ORM to create and manage a database schema with three or more related tables. Alembic is employed to handle database migrations, ensuring proper organization and version control.
 
 ## CLI Best Practices ##
-The CLI follows best practices to enhance user experience:
+**The CLI follows best practices to enhance user experience**
 
 Separation of scripted elements from object-oriented code.
 Validation of user input to ensure data integrity.
@@ -85,6 +88,17 @@ The Real Estate CLI incorporates data structures such as lists, tuples, and dict
 ~ Dennis Kimani
 ~ Claire Muiru
 
+## Commands ##
+**The Real Estate CLI Application supports the following commands**
+
+*Search*: Find properties based on specific criteria.
+*Details*: View detailed information about a particular property.
+*Delete*: Delete the application.
+*Add*:Allows a user to add a house.
+
+## Objectives ##
+The main objective of the **Real Estate CLI project** is to provide real estate professionals with an efficient, user-friendly command-line tool that simplifies and streamlines the management of real estate data and operations.
+.
 
 ## Contributing ##
 If you would like to contribute to the Real Estate CLI project, please follow the guidelines in CONTRIBUTING.md. We welcome your input and ideas!
