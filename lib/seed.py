@@ -13,7 +13,7 @@ def seed_data():
         # Add more house data as needed
     ]
 
-    # User data name
+    # User data 
     user_data = [
         {'name': 'John Doe', 'email': 'johndoe@example.com', 'no_of_houses': 2},
         {'name': 'Jane Smith', 'email': 'janesmith@example.com', 'no_of_houses': 1},
