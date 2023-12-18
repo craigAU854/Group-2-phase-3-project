@@ -25,7 +25,7 @@ To get started with the Real Estate CLI, follow these steps:
 
 1. *Clone the repository:*
 
-    bash
+    ~~~bash~~~
     git clone https://github.com/your-username/real-estate-cli.git
     cd real-estate-cli
     
