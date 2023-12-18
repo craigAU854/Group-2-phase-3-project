@@ -44,8 +44,8 @@ To get started with the Real Estate CLI, follow these steps:
 
 4. *Run the CLI script:*
 
-    bash
-    python cli.py
+   ~~~ bash~~~
+    python cli.py 
     
 ## External Libraries ##
 The project makes use of external libraries, such as SQLAlchemy for database management and Click for CLI-related tasks. These libraries enhance the functionality and maintainability of the code.
