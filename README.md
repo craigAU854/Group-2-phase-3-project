@@ -1,7 +1,7 @@
 ## GROUP 2 PROJECT ##
 
 ## Real Estate CLI ##
-Welcome to the Real Estate CLI project! This command-line interface (CLI) is designed to help a user to search for any listed property,see available listings all from the cli , providing a seamless and efficient way to access real estate information. This README will guide you through the setup, features, and best practices employed in this project.
+Welcome to the Amana Realty Management System CLI project! This command-line interface (CLI) is designed to help a user to search for any listed property,see available listings all from the CLI, providing a seamless and efficient way to access real estate information. This README will guide you through the setup, features, and best practices employed in this project.
 
 ## Features
 1. A user is able to list a property.
