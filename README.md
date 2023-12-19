@@ -67,7 +67,7 @@ The Real Estate CLI incorporates data structures such as lists, tuples, and dict
 ~ Guyo Halake
 ~ Craig Otieno
 ~ Ivy Kibe
-~ Dennis Kimani
+~ Dennis kimani
 ~ Claire Muiru
 
 ## Commands ##
